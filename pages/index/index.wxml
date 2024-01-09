@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="label">连接域名：</view>
+  <input bindinput="setHost" value="{{ host }}" />
+  <view class="is-flex">
+    <button type="primary" bindtap="connect">{{ conenctBtnText }}</button>
+    <button type="warn" disabled="{{ conenctBtnText === '连接' }}" bindtap="disconnect">断开连接</button>
+  </view>
+  <view class="label">订阅主题：</view>
+  <input bindinput="setSubTopic" value="{{ subTopic }}" />
+  <view class="is-flex">
+    <button type="primary" bindtap="subscribe">订阅</button>
+    <button type="warn" bindtap="unsubscribe">取消订阅</button>
+  </view>
+  <view class="label">发布主题及消息：</view>
+  <input bindinput="setPubTopic" value="{{ pubTopic }}" />
+  <input bindinput="setPubMsg" value="{{ pubMsg }}"></input>
+  <view class="is-flex">
+    <button type="primary" bindtap="publish">发布</button>
+  </view>
+  <view class="container">
+  <view class="divLine"></view>
+  </view>
+  <view class="label">当前温湿度：</view>
+  <view style="font-size: 25px;font-weight: bold;text-align: center;">
+    <rich-text nodes="{{displayCurrMsg}}"></rich-text>
+  </view>
+  <view class="label">历史记录：</view>
+  <view class="received-msg-box">
+    <rich-text nodes="{{receivedMsg }}"></rich-text>
+  </view>
+</view>

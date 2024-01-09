@@ -1,0 +1,6 @@
+{
+  "projectname": "mqtt-client-wechat-miniprogram",
+  "setting": {
+    "compileHotReLoad": true
+  }
+}
